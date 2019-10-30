@@ -298,11 +298,11 @@ export default class ImgPreview extends PureComponent<{}, PreviewState> {
     // const delta = e.wheelDelta ? e.wheelDelta : -(e.detail || 0)
     let { scale } = this.imgState
     if (-e.deltaY < 0) {
-      // 放大
-      scale *= 1.1
-    } else {
       // 缩小
       scale *= 0.9
+    } else {
+      // 放大
+      scale *= 1.1
     }
     this.updateImageState({
       scale: +scale.toFixed(2)
